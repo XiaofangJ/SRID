@@ -24,10 +24,10 @@ def pipeline(args):
     mean=args.mean
     sd=args.sd
     readlen=args.readlen
+    tmpdir=args.tmpdir
 
-    f=tempfile.NamedTemporaryFile(mode='w+b', delete=False)
-    prefix=f.name
-    f.close()
+    f=next(tempfile._get_candidate_names())
+    prefix=tmpdir+f
 
     # step 1: identify read pairs that meet the following requirements:
     #        a. Both reads aligned but not in proper pair (-F 14)
@@ -43,9 +43,14 @@ def pipeline(args):
     #      2.1 Remove reads that don't aligned to the reference genomes and sort the sam file based on reads name
     #      2.2 Retrieve reads that have two entries in the sam files and store those entries
     cmd = '''
-    samtools sort  -n -@ {core} {input} |samtools view -F 4 -@ {core} |sort -k1,1 >{prefix}.tmp.sam;
-    cut -f 1 {prefix}.tmp.sam |uniq -dc|awk '$1==2{{print $2}}'|sort -k1,1 >{prefix}.duplist;
-    join -t $'\\t' {prefix}.duplist  {prefix}.tmp.sam >{prefix}.sam '''.format(input=input,core=core, min_SR=min_SR,prefix=prefix)
+    samtools view -F 4 -hb -@ {core} {input} |samtools sort -n -@ {core} > {prefix}.tmp.bam
+    samtools view -f 65 -@ {core} {prefix}.tmp.bam|sort -k1,1 >{prefix}.tmp.1.sam;
+    cut -f 1 {prefix}.tmp.1.sam |uniq -dc|awk '$1==2{{print $2}}'|sort -k1,1 >{prefix}.1.duplist;
+    join -t $'\\t' {prefix}.1.duplist  {prefix}.tmp.1.sam >{prefix}.1.sam 
+    
+    samtools view -f 129  -@ {core} {prefix}.tmp.bam|sort -k1,1 >{prefix}.tmp.2.sam;
+    cut -f 1 {prefix}.tmp.2.sam |uniq -dc|awk '$1==2{{print $2}}'|sort -k1,1 >{prefix}.2.duplist;
+    join -t $'\\t' {prefix}.2.duplist  {prefix}.tmp.2.sam >{prefix}.2.sam '''.format(input=input,core=core, min_SR=min_SR,prefix=prefix)
     print("****** NOW RUNNING COMMAND ******: " + cmd)
     print run_cmd(cmd)
 
@@ -58,9 +63,16 @@ def pipeline(args):
     #           d. More than min_SR number of reads supporting the split site
     #           e. The insertions region is with range 1000 ~ 150000 bps
     cmd = '''
-    sam2bed <{prefix}.sam |sort -k4,4 -k2,2n >{prefix}.bed;
-    awk 'BEGIN{{OFS="\\t";ORS=""}}NR%2==1{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\t"}}NR%2==0{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\n"}}' {prefix}.bed |
-    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}' > {prefix}.SR.bed
+    sam2bed <{prefix}.1.sam |sort -k4,4 -k2,2n >{prefix}.1.bed;
+    awk 'BEGIN{{OFS="\\t";ORS=""}}NR%2==1{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\t"}}NR%2==0{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\n"}}' {prefix}.1.bed |
+    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 10 && n[2] >= 10 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.1/' > {prefix}.1.SR.bed
+
+    sam2bed <{prefix}.2.sam |sort -k4,4 -k2,2n >{prefix}.2.bed;
+    awk 'BEGIN{{OFS="\\t";ORS=""}}NR%2==1{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\t"}}NR%2==0{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\n"}}' {prefix}.2.bed |
+    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 10 && n[2] >= 10 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.2/' > {prefix}.2.SR.bed
+
+    cat {prefix}.1.SR.bed {prefix}.2.SR.bed >{prefix}.SR.bed
+
     cut -f 1-3 {prefix}.SR.bed |sort|uniq -c|awk '$1>={min_SR}{{print $2"\\t"$3"\\t"$4}}'| awk '$3-$2>1000 && $3-$2<150000' |sortBed >{prefix}.splitsite.bed '''.format(input=input,core=core, min_SR=min_SR,prefix=prefix)
     print("****** NOW RUNNING COMMAND ******: " + cmd)
     print run_cmd(cmd)
@@ -84,7 +96,7 @@ def pipeline(args):
     print run_cmd(cmd)
     
     # step 6: remove intermediate file 
-    cmd = '''mv {prefix}.tab {output} ; rm {prefix}.bed {prefix}.duplist {prefix}.PE.bed {prefix}.sam {prefix}.splitsite.bed {prefix}.SR.bed {prefix}.support.PE.bed {prefix}.support.SR.bed {prefix}.tmp.PE.bed {prefix}.tmp.sam {prefix}.tmp.SR.bed '''.format(prefix=prefix,output=output)
+    cmd = '''mv {prefix}.tab {output} ; rm  {prefix}.* '''.format(prefix=prefix,output=output)
     print("****** NOW RUNNING COMMAND ******: " + cmd)
     print run_cmd(cmd)
 
@@ -95,6 +107,7 @@ if __name__ == "__main__":
     parser = ArgumentParser(description='Identify putative insertions in reference genomes from bam alignments')
     parser.add_argument('-b', '--bam', help='input bam file', required=True,dest='input',metavar='')
     parser.add_argument('-o', '--out', help='output file', required=True,dest='output',metavar='')
+    parser.add_argument('-t', '--tmp', help='tmp dir', dest='tmpdir',default="tmp/",metavar='')
     parser.add_argument('-p', '--threads', help='number of threads used',type=int,default=1, required=False,dest='core',metavar='')
     parser.add_argument('-r', '--readlen', help='average read length',type=int, required=True,dest='readlen',metavar='')
     parser.add_argument('-m', '--mean', help='mean library insertion size',type=float,required=True,dest='mean',metavar='')
