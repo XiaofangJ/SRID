@@ -27,7 +27,7 @@ def pipeline(args):
     tmpdir=args.tmpdir
 
     f=next(tempfile._get_candidate_names())
-    prefix=tmpdir+f
+    prefix=tmpdir+"/"+f
 
     # step 1: identify read pairs that meet the following requirements:
     #        a. Both reads aligned but not in proper pair (-F 14)
@@ -62,14 +62,15 @@ def pipeline(args):
     #           c. There is no base pair that failed to align to the scaffold ($4>=0)
     #           d. More than min_SR number of reads supporting the split site
     #           e. The insertions region is with range 1000 ~ 150000 bps
+    #           f. The base pairs matched for both fragments should be equal or longer than 16
     cmd = '''
     sam2bed <{prefix}.1.sam |sort -k4,4 -k2,2n >{prefix}.1.bed;
     awk 'BEGIN{{OFS="\\t";ORS=""}}NR%2==1{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\t"}}NR%2==0{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\n"}}' {prefix}.1.bed |
-    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 10 && n[2] >= 10 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.1/' > {prefix}.1.SR.bed
+    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 16 && n[2] >= 16 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.1/' > {prefix}.1.SR.bed
 
     sam2bed <{prefix}.2.sam |sort -k4,4 -k2,2n >{prefix}.2.bed;
     awk 'BEGIN{{OFS="\\t";ORS=""}}NR%2==1{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\t"}}NR%2==0{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11"\\n"}}' {prefix}.2.bed |
-    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 10 && n[2] >= 10 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.2/' > {prefix}.2.SR.bed
+    awk '$1==$12 && match($8,/^([0-9]*)M([0-9]*)[SH]$/,m) && match($19,/^([0-9]*)[SH]([0-9]*)M$/,n) && m[1] >= 16 && n[2] >= 16 && m[1]-n[1]>0 {{print $1 "\\t" $2+m[0] "\\t" $13 "\\t" $4}}'|sed 's/$/.2/' > {prefix}.2.SR.bed
 
     cat {prefix}.1.SR.bed {prefix}.2.SR.bed >{prefix}.SR.bed
 
@@ -107,7 +108,7 @@ if __name__ == "__main__":
     parser = ArgumentParser(description='Identify putative insertions in reference genomes from bam alignments')
     parser.add_argument('-b', '--bam', help='input bam file', required=True,dest='input',metavar='')
     parser.add_argument('-o', '--out', help='output file', required=True,dest='output',metavar='')
-    parser.add_argument('-t', '--tmp', help='tmp dir', dest='tmpdir',default="tmp/",metavar='')
+    parser.add_argument('-t', '--tmpdir', help='tmp dir', dest='tmpdir',default=tempfile.gettempdir(),metavar='')
     parser.add_argument('-p', '--threads', help='number of threads used',type=int,default=1, required=False,dest='core',metavar='')
     parser.add_argument('-r', '--readlen', help='average read length',type=int, required=True,dest='readlen',metavar='')
     parser.add_argument('-m', '--mean', help='mean library insertion size',type=float,required=True,dest='mean',metavar='')
