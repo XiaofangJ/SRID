@@ -1,0 +1,361 @@
+PF00959	Phage_lysozyme: phage lysozyme
+PF01018	GTP1_OBG: GTP1/OBG
+PF01464	SLT: transglycosylase SLT domain
+PF01473	CW_binding_1: putative cell wall-binding repeat
+PF01510	Amidase_2: N-acetylmuramoyl-L-alanine amidase
+PF01664	Reo_sigma1: reovirus viral attachment protein sigma 1
+PF01818	Translat_reg: bacteriophage translational regulator
+PF01819	Levi_coat: levivirus coat protein
+PF02061	Lambda_CIII: lambda phage CIII
+PF02303	Phage_DNA_bind: helix-destabilizing protein
+PF02304	Phage_B: scaffold protein B
+PF02305	Phage_F: capsid protein
+PF02306	Phage_G: major spike protein
+PF02316	HTH_Tnp_Mu_1: Mu DNA-binding domain
+PF02368	Big_2: bacterial Ig-like domain, group 2
+PF02413	Caudo_TAP: caudovirales tail fibre assembly protein
+PF02661	Fic: Fic/DOC family
+PF02831	gpW: head to-tail joining protein W
+PF02914	DDE_2: bacteriophage Mu transposase
+PF02924	HDPD: bacteriophage lambda head decoration protein D
+PF02925	gpD: bacteriophage scaffolding protein D
+PF03197	FRD2: bacteriophage FRD2 protein
+PF03245	Phage_lysis: bacteriophage lysis protein
+PF03335	Phage_fiber: phage tail fiber repeat
+PF03354	Terminase_1: putative phage terminase, large subunit
+PF03374	ANT: phage antirepressor protein KilAC domain
+PF03406	Phage_fiber_2: phage tail fiber repeat
+PF03420	Peptidase_U9: prohead core protein protease, T4 family
+PF03431	RNA_replicase_B: RNA replicase, beta-chain
+PF03592	Terminase_2: terminase small subunit
+PF03863	Phage_mat-A: phage maturation protein
+PF03864	Phage_cap_E: phage major capsid protein E
+PF03903	Phage_T4_gp36: phage T4 tail fibre
+PF03906	Phage_T7_tail: phage T7 tail fiber protein
+PF04233	Phage_Mu_F: phage Mu protein F-like protein
+PF04404	ERF: Erf superfamily
+PF04447	DUF550: PF04447 family
+PF04448	DUF551: PF04448 family
+PF04466	Terminase_3: phage terminase large subunit
+PF04492	Phage_rep_O: bacteriophage replication protein O
+PF04517	Microvir_lysis: microvirus lysis protein, C-terminal
+PF04531	Phage_holin_1: bacteriophage holin
+PF04550	Phage_holin_2: phage holin family 2
+PF04586	Peptidase_U35: caudovirus prohead protease
+PF04630	Phage_tail: phage major tail protein
+PF04687	Microvir_H: microvirus H protein
+PF04688	Phage_holin: phage lysis protein, holin
+PF04717	Phage_base_V: phage-related baseplate assembly protein
+PF04726	Microvir_J: microvirus J protein
+PF04761	Phage_Treg: Lactococcus bacteriophage putative transcription regulator
+PF04860	Phage_portal: phage portal protein
+PF04865	Baseplate_J: baseplate J-like protein
+PF04883	DUF646: bacteriophage protein, PF04883 family
+PF04936	DUF658: PF04936 family
+PF04984	Phage_sheath_1: phage tail sheath protein
+PF04985	Phage_tube: phage tail tube protein FII
+PF05017	TMP: TMP repeat
+PF05037	DUF669: PF05037 family
+PF05065	Phage_capsid: phage capsid family
+PF05069	Phage_tail_S: phage virion morphogenesis family
+PF05100	Phage_tail_L: phage minor tail protein L
+PF05102	Holin_BlyA: holin, BlyA family
+PF05105	Phage_holin_4: holin family
+PF05106	Phage_holin_3: phage holin family
+PF05119	Terminase_4: phage terminase, small subunit
+PF05125	Phage_cap_P2: phage major capsid protein, P2 family
+PF05133	Phage_prot_Gp6: phage portal protein, SPP1 Gp6-like
+PF05135	Phage_connect_1: Phage gp6-like head-tail connector protein
+PF05136	Phage_portal_2: phage portal protein, lambda family
+PF05144	Phage_CRI: phage replication protein CRI
+PF05155	Phage_X: phage X family
+PF05263	DUF722: PF05263 family
+PF05268	GP38: phage tail fibre adhesin Gp38
+PF05269	Phage_CII: bacteriophage CII protein
+PF05289	BLYB: Borrelia hemolysin accessory protein
+PF05322	NinE: NINE protein
+PF05339	DUF739: PF05339 family
+PF05352	Phage_connector: phage connector
+PF05354	Phage_attach: phage head-tail attachment
+PF05356	Phage_Coat_B: phage coat protein B
+PF05357	Phage_Coat_A: phage coat protein A
+PF05358	DicB: DicB protein
+PF05367	Phage_endo_I: phage endonuclease I
+PF05371	Phage_Coat_Gp8: phage major coat protein, Gp8
+PF05382	Amidase_5: bacteriophage peptidoglycan hydrolase
+PF05396	Phage_T7_Capsid: phage T7 capsid assembly protein
+PF05435	Phi-29_GP3: phi-29 DNA terminal protein GP3
+PF05449	DUF754: PF05449 family
+PF05464	Phi-29_GP4: phi-29-like late genes activator
+PF05489	Phage_tail_X: phage tail protein X
+PF05521	Phage_H_T_join: phage head-tail joining protein
+PF05565	Sipho_Gp157: siphovirus Gp157
+PF05595	DUF771: PF05595 domain
+PF05666	Fels1: Fels-1 prophage protein-like
+PF05707	Zot: zonula occludens toxin
+PF05709	Sipho_tail: phage tail protein
+PF05766	NinG: bacteriophage Lambda NinG protein
+PF05772	NinB: NinB protein
+PF05798	Phage_FRD3: bacteriophage FRD3 protein
+PF05810	NinF: NinF protein
+PF05840	Phage_GPA: bacteriophage replication gene A family protein
+PF05847	Baculo_LEF-3: nucleopolyhedrovirus late expression factor 3
+PF05869	Dam: DNA N-6-adenine-methyltransferase (Dam)
+PF05876	Terminase_GpA: phage terminase large subunit GpA
+PF05894	Podovirus_Gp16: podovirus DNA encapsidation protein
+PF05908	DUF867: PF05908 family
+PF05926	Phage_GPL: phage head completion protein GPL
+PF05929	Phage_GPO: phage capsid scaffolding protein (GPO) serine peptidase
+PF05930	Phage_AlpA: transcriptional regulator, AlpA family
+PF05939	Phage_min_tail: phage minor tail protein
+PF05944	Phage_term_smal: phage small terminase subunit
+PF05946	TcpA: toxin-coregulated pilus subunit TcpA
+PF05954	Phage_GPD: phage late control gene D protein
+PF05973	Gp49: Gp49-like PF05973 family
+PF06019	Phage_30_8: phage GP30.8 protein
+PF06056	Terminase_5: putative terminase, ATPase subunit, gpP-like
+PF06074	DUF935: PF06074 family
+PF06085	Rz1: lipoprotein Rz1 precursor
+PF06116	RinB: transcriptional activator RinB
+PF06120	Phage_HK97_TLTM: tail length tape measure protein
+PF06141	Phage_tail_U: phage minor tail protein U
+PF06147	DUF968: PF06147 family
+PF06152	Phage_min_cap2: phage minor capsid protein 2
+PF06158	Phage_E: phage tail protein E
+PF06194	Phage_Orf51: phage conserved open reading frame 51
+PF06199	Phage_tail_2: phage major tail protein 2
+PF06222	Phage_TAC: phage tail assembly chaperone
+PF06223	Phage_tail_T: minor tail protein T
+PF06260	DUF1024: PF06260 family
+PF06275	DUF1031: PF06275 family
+PF06291	Lambda_Bor: bor protein
+PF06301	Lambda_Kil: bacteriophage lambda Kil family protein
+PF06322	Phage_NinH: phage protein NinH
+PF06323	Phage_antiter_Q: phage antitermination protein Q
+PF06340	TcpF: Vibrio cholerae toxin co-regulated pilus biosynthesis protein F
+PF06341	DUF1056: PF06341 family
+PF06356	DUF1064: PF06356 family
+PF06378	DUF1071: PF06378 family
+PF06488	L_lac_phage_MSP: Lactococcus lactis bacteriophage major structural protein
+PF06528	Phage_P2_GpE: phage tail protein, P2 GpE family
+PF06530	Phage_antitermQ: phage antitermination protein Q
+PF06531	DUF1108: PF06531 family
+PF06543	Lac_bphage_repr: Lactococcus bacteriophage repressor
+PF06563	DUF1125: PF06563 family
+PF06591	Phage_T4_Ndd: T4-like phage nuclear disruption protein (Ndd)
+PF06600	DUF1140: PF06600 family
+PF06673	L_lactis_ph-MCP: lactococcus lactis bacteriophage major capsid protein
+PF06714	Gp5_OB: Gp5 N-terminal OB domain
+PF06715	Gp5_C: Gp5 C-terminal repeat (3 copies)
+PF06720	Phi-29_GP16_7: bacteriophage phi-29 early protein GP16.7
+PF06737	Transglycosylas: transglycosylase-like domain
+PF06763	Minor_tail_Z: prophage minor tail protein Z
+PF06791	TMP_2: prophage tail length tape measure protein
+PF06805	Lambda_tail_I: bacteriophage lambda tail assembly protein I
+PF06806	DUF1233: excisionase family protein
+PF06810	Phage_GP20: phage minor structural protein GP20
+PF06820	Phage_fiber_C: putative prophage tail fibre C-terminus
+PF06841	Phage_T4_gp19: T4-like virus tail tube protein gp19
+PF06854	Phage_Gp15: bacteriophage Gp15 protein
+PF06890	Phage_Mu_Gp45: bacteriophage Mu Gp45 protein
+PF06891	P2_Phage_GpR: P2 phage tail completion protein R (GpR)
+PF06892	Phage_CP76: phage regulatory protein CII
+PF06894	Phage_lambd_GpG: bacteriophage lambda minor tail protein GpG
+PF06896	DUF1268: PF06896 family
+PF06900	DUF1270: PF06900 family
+PF06919	Phage_T4_Gp30_7: phage Gp30.7 protein
+PF06926	Rep_Org_C: putative replisome organiser protein C-terminal
+PF06946	Phage_holin_5: phage holin
+PF06950	DUF1293: PF06950 family
+PF06992	Phage_lambda_P: replication protein P
+PF06995	Phage_P2_GpU: phage P2 GpU
+PF07022	Phage_CI_repr: bacteriophage CI repressor protein
+PF07026	DUF1317: phage conserved hypothetical protein
+PF07030	DUF1320: phage conserved hypothetical protein
+PF07066	DUF3882: lactococcus phage M3 protein
+PF07067	DUF1340: PF07067 family
+PF07068	Gp23: major capsid protein Gp23
+PF07083	DUF1351: PF07083 family
+PF07097	DUF1359: PF07097 family
+PF07102	DUF1364: PF07102 family
+PF07104	DUF1366: PF07104 family
+PF07105	DUF1367: PF07105 family
+PF07108	PipA: PipA protein
+PF07116	DUF1372: PF07116 family
+PF07125	DUF1378: PF07125 family
+PF07129	DUF1381: PF07129 family
+PF07131	DUF1382: PF07131 family
+PF07141	Phage_term_sma: putative bacteriophage terminase small subunit
+PF07157	DNA_circ_N: DNA circulation protein N-terminus
+PF07193	DUF1408: PF07193 family
+PF07212	Hyaluronidase_1: hyaluronidase protein HylP
+PF07230	Phage_T4_Gp20: bacteriophage T4-like capsid assembly protein Gp20
+PF07352	Phage_Mu_Gam: bacteriophage Mu Gam like protein
+PF07374	DUF1492: PF07374 family
+PF07384	DUF1497: PF07384 family
+PF07409	GP46: phage protein GP46
+PF07410	Phage_Gp111: streptococcus thermophilus bacteriophage Gp111 protein
+PF07438	DUF1514: PF07438 family
+PF07455	Psu: phage polarity suppression protein
+PF07459	CTX_RstB: CTX phage RstB protein
+PF07471	Phage_Nu1: phage DNA packaging protein Nu1
+PF07484	Collar: phage tail collar domain
+PF07505	Gp37_Gp68: phage protein Gp37/Gp68
+PF07634	RtxA: RtxA repeat
+PF07761	DUF1617: PF07761 family
+PF07768	PVL_ORF50: PVL ORF-50-like family
+PF07825	Exc: excisionase-like protein
+PF07852	DUF1642: PF07852 family
+PF07868	DUF1655: PF07868 family
+PF07874	DUF1660: PF07874 family
+PF07880	T4_gp9_10: bacteriophage T4 gp9/10-like protein
+PF07902	Gp58: gp58-like protein
+PF07921	Fibritin_C: fibritin C-terminal region
+PF08010	Phage_30_3: bacteriophage protein GP30.3
+PF08133	Nuclease_act: anticodon nuclease activator family
+PF08199	E2: bacteriophage E2-like protein
+PF08200	Phage_1_1: bacteriophage 1.1 protein
+PF08230	Cpl-7: Cpl-7 lysozyme C-terminal domain
+PF08273	Prim_Zn_Ribbon: zinc-binding domain of primase-helicase
+PF08346	AntA: AntA/AntB antirepressor
+PF08677	GP11: GP11 baseplate wedge protein
+PF08684	ocr: DNA mimic ocr
+PF08706	D5_N: D5 N terminal like
+PF08765	Mor: mor transcription activator family
+PF08774	VRR_NUC: VRR-NUC domain
+PF08804	gp32: gp32 DNA binding protein like
+PF08931	DUF1913: PF08931 domain
+PF08932	DUF1914: PF08932 domain
+PF08948	DUF1859: PF08948 domain
+PF08949	DUF1860: PF08949 domain
+PF08993	T4-helicase_N: T4 gene 59 helicase, N terminal
+PF08994	T4-helicase_C: T4 gene 59 helicase, C terminal
+PF09018	Phage_Capsid_P3: P3 major capsid protein
+PF09063	Phage_coat: phage PP7 coat protein
+PF09077	Phage-MuB_C: Mu B transposition protein, C terminal
+PF09089	gp12-short_mid: phage short tail fibre protein gp12, middle domain
+PF09096	Phage-tail_2: baseplate structural protein, domain 2
+PF09097	Phage-tail_1: baseplate structural protein, domain 1
+PF09114	MotA_activ: transcription factor MotA, activation domain
+PF09124	Endonuc-dimeris: T4 recombination endonuclease VII, dimerisation
+PF09158	MotCF: bacteriophage T4 MotA, C-terminal
+PF09214	Prd1-P2: bacteriophage Prd1, adsorption protein P2
+PF09215	Phage-Gp8: bacteriophage T4, Gp8
+PF09299	Mu-transpos_C: Mu transposase, C-terminal
+PF09300	Tecti-min-caps: tectiviridae, minor capsid
+PF09306	Phage-scaffold: bacteriophage, scaffolding protein
+PF09327	DUF1983: PF09327 domain
+PF10779	XhlA: hemolysin XhlA
+TIGR00616	rect: recombinase, phage RecT family
+TIGR01446	DnaD_dom: DnaD domain protein
+TIGR01537	portal_HK97: phage portal protein, HK97 family
+TIGR01538	portal_SPP1: phage portal protein, SPP1 family
+TIGR01539	portal_lambda: phage portal protein, lambda family
+TIGR01540	portal_PBSX: phage portal protein, PBSX family
+TIGR01541	tape_meas_lam_C: phage tail tape measure protein, lambda family
+TIGR01542	A118_put_portal: phage portal protein, putative, A118 family
+TIGR01543	proheadase_HK97: phage prohead protease, HK97 family
+TIGR01547	phage_term_2: phage terminase, large subunit, PBSX family
+TIGR01551	major_capsid_P2: phage major capsid protein, P2 family
+TIGR01554	major_cap_HK97: phage major capsid protein, HK97 family
+TIGR01555	phge_rel_HI1409: phage-associated protein, HI1409 family
+TIGR01558	sm_term_P27: putative phage terminase, small subunit, P27 family
+TIGR01560	put_DNA_pack: uncharacterized phage protein (possible DNA packaging)
+TIGR01563	gp16_SPP1: putative phage head-tail adaptor
+TIGR01592	holin_SPP1: holin, SPP1 family
+TIGR01593	holin_tox_secr: toxin secretion/phage lysis holin
+TIGR01594	holin_lambda: phage holin, lambda family
+TIGR01598	holin_phiLC3: holin, phage phi LC3 family
+TIGR01600	phage_tail_L: phage minor tail protein L
+TIGR01603	maj_tail_phi13: phage major tail protein, phi13 family
+TIGR01606	holin_BlyA: holin, BlyA family
+TIGR01610	phage_O_Nterm: phage replication protein O, N-terminal domain
+TIGR01611	tail_tube: phage major tail tube protein
+TIGR01613	primase_Cterm: phage/plasmid primase, P4 family, C-terminal domain
+TIGR01618	phage_P_loop: phage nucleotide-binding protein
+TIGR01629	rep_II_X: phage/plasmid replication protein, gene II/X family
+TIGR01630	psiM2_ORF9: phage uncharacterized protein, C-terminal domain
+TIGR01633	phi3626_gp14_N: putative phage tail component, N-terminal domain
+TIGR01634	tail_P2_I: phage tail protein I
+TIGR01635	tail_comp_S: phage virion morphogenesis protein
+TIGR01636	phage_rinA: phage transcriptional regulator, RinA family
+TIGR01637	phage_arpU: phage transcriptional regulator, ArpU family
+TIGR01641	phageSPP1_gp7: phage head morphogenesis protein, SPP1 gp7 family
+TIGR01644	phage_P2_V: phage baseplate assembly protein V
+TIGR01665	put_anti_recept: phage minor structural protein, N-terminal region
+TIGR01669	phage_XkdX: phage uncharacterized protein, XkdX family
+TIGR01671	phage_TIGR01671: phage conserved hypothetical protein TIGR01671
+TIGR01673	holin_LLH: phage holin, LL-H family
+TIGR01674	phage_lambda_G: phage minor tail protein G
+TIGR01712	phage_N6A_met: phage N-6-adenine-methyltransferase
+TIGR01714	phage_rep_org_N: phage replisome organizer, putative, N-terminal region
+TIGR01715	phage_lam_T: phage tail assembly protein T
+TIGR01725	phge_HK97_gp10: phage protein, HK97 gp10 family
+TIGR01760	tape_meas_TP901: phage tail tape measure protein, TP901 family, core region
+TIGR02126	phgtail_TP901_1: phage major tail protein, TP901-1 family
+TIGR02215	phage_chp_gp8: phage conserved hypothetical protein, phiE125 gp8 family
+TIGR02216	phage_TIGR02216: phage conserved hypothetical protein
+TIGR02217	chp_TIGR02217: TIGR02217 family protein
+TIGR02218	phg_TIGR02218: phage conserved hypothetical protein BR0599
+TIGR02219	phage_NlpC_fam: putative phage cell wall peptidase, NlpC/P60 family
+TIGR02220	phg_TIGR02220: phage conserved hypothetical protein, C-terminal domain
+TIGR02242	tail_TIGR02242: phage tail protein domain
+TIGR02243	TIGR02243: conserved hypothetical protein
+TIGR02307	RNA_lig_RNL2: RNA ligase, Rnl2 family
+TIGR02308	RNA_lig_T4_1: RNA ligase, T4 RnlA family
+TIGR02419	C4_traR_proteo: phage/conjugal plasmid C-4 type zinc finger protein, TraR family
+TIGR02642	phage_xxxx: uncharacterized phage protein
+TIGR02681	phage_pRha: phage regulatory protein, Rha family
+TIGR02763	chlamy_scaf: scaffolding protein
+PF04965	GPW_gp25: Gene 25-like lysozyme
+PF11651	P22_CoatProtein: P22 coat protein - gene protein 5
+PF10076	DUF2313: Uncharacterised protein conserved in bacteria (DUF2313)
+PF06252	DUF1018: Protein of unknown function (DUF1018)
+PF11985	DUF3486: Protein of unknown function (DUF3486)
+PF03237	Terminase_6: Terminase-like family
+PF12571	DUF3751:  Phage tail-collar fibre protein
+PF16938	Phage_holin_Dp1: Putative phage holin Dp-1
+PF13274	DUF4065: Protein of unknown function (DUF4065)
+PF11363	DUF3164: Protein of unknown function (DUF3164)
+PF10544	T5orf172: T5orf172 domain
+TIGR02675	tape_meas_nterm: tape measure domain
+SSF53955	Lysozyme-like superfamily
+PF10123	Mu-like prophage I protein
+TIGR03033	phage_rel_nuc: putative phage-type endonuclease
+PF09682	Bacteriophage holin of superfamily 6 (Holin_LLH)
+TIGR04387	capsid_maj_N4: major capsid protein, N4-gp56 family
+TIGR03033	phage_rel_nuc: putative phage-type endonuclease
+PF11417	Loader and inhibitor of phage G40P
+PF11133	Head fiber protein
+cd07022	S49_Sppa_36K_type
+PF08681	Protein of unknown function (DUF1778)
+PF10546	P63C domain
+PF16778	Phage tail assembly chaperone protein
+PF16945	Putative lactococcus lactis phage r1t holin
+PF09355	Phage protein Gp19/Gp15/Gp42
+PF11133	Head fiber protein
+TIGR01913	bet_lambda: phage recombination protein Bet
+PF09639	YjcQ protein
+PF09355	Phage protein Gp19/Gp15/Gp42
+PF16079	Phage holin family Hol44, in holin superfamily V
+PF09693	Phage uncharacterised protein (Phage_XkdX)
+PF11133	Head fiber protein
+PF10546	P63C domain
+PF09669	Phage regulatory protein Rha (Phage_pRha)
+PF09669	Phage regulatory protein Rha (Phage_pRha)
+PF12236	Bacteriophage head to tail connecting protein
+PF11133	Head fiber protein
+PF09355	Phage protein Gp19/Gp15/Gp42
+PF16778	Phage tail assembly chaperone protein
+PF16079	Phage holin family Hol44, in holin superfamily V
+PF09669	Phage regulatory protein Rha (Phage_pRha)
+PF08890	Phage XkdN-like tail assembly chaperone protein, TAC
+PF09393	Phage tail tube protein
+PF10109	Phage tail assembly chaperone proteins, E, or 41 or 14
+PF13856	ATP-binding sugar transporter from pro-phage
+PF14550	Putative phage serine protease XkdF
+PF09684	Phage tail protein (Tail_P2_I)
+PF10668	Phage terminase small subunit
+PF10124	Mu-like prophage major head subunit gpT
+PF14253	Bacteriophage abortive infection AbiH
+PF16872	Putative phage abortive infection protein

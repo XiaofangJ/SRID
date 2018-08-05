@@ -20,7 +20,7 @@ first tool to perform  horizontal gene transfer detection by mapping sequencing 
 
 ## Quick Start
 ```
-usage: SRID.py [-h] -b  -o  [-p] -r  -m  -s  [-n]
+usage: SRID.py [-h] -b  -o  [-t] [-p] -r  -m  -s  [-n]
 
 Identify putative insertions in reference genomes from bam alignments
 
@@ -28,11 +28,13 @@ optional arguments:
   -h, --help       show this help message and exit
   -b , --bam       input bam file
   -o , --out       output file
+  -t , --tmpdir    tmp dir
   -p , --threads   number of threads used
   -r , --readlen   average read length
   -m , --mean      mean library insertion size
   -s , --sd        standard deviation of library insertion size
   -n , --number    number of split reads required to validate split sites
+
 ```
 
 ### Input
@@ -40,7 +42,6 @@ optional arguments:
 `bwa mem ref.fa 1.fq 2.fq |samtools view -F 4 -Sb >input.bam` 
      + ref.fa ==> reference genomes where MGEs are expected to inserted into 
      + 1.fq, 2.fq ==> paired files with metagenomic/genomic sequencing read pairs;
-     the name of the reads should not be identical in 1.fq and 2.fq
 + average read length: the mean value of read length in 1.fq and 2.fq 
 + library insertion size: the base pairs of the sequence between adapters 
     + You can either obtain insertion size information from your sequencing
